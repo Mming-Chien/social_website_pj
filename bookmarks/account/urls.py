@@ -28,6 +28,9 @@ urlpatterns = [
 
 	path('', views.dashboard, name='dashboard'),
 
+	# Url for register
+	path('register/', views.register, name='register'),
+
 
 
 ]
