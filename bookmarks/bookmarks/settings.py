@@ -132,3 +132,7 @@ LOGOUT_URL = 'logout'
 
 # Send email to console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# File upload and media file
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR/ 'media'
