@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m_nctjk-12r@!4h=s^2*r_4mws&#%n(my-)baq!lioswp0@mdm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -33,6 +33,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #My apps
     'account.apps.AccountConfig',
+
+    #third party apps
+    'social_django',
+    'django_extensions',
     #django default apps
     'django.contrib.admin',
     'django.contrib.auth',
