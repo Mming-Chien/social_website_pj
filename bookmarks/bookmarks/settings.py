@@ -145,4 +145,12 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
+
+
+# Authenticate using facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '451347253806385' #facebook app id
+SOCIAL_AUTH_FACEBOOK_SECRET = '13114faa1d6c09c8241cf3fc5e41c2f9' #Facebook app secret
+# Extra permission want to ask Facebook users for
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
