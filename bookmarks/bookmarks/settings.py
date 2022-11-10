@@ -146,6 +146,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+#    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 
@@ -154,3 +156,8 @@ SOCIAL_AUTH_FACEBOOK_KEY = '451347253806385' #facebook app id
 SOCIAL_AUTH_FACEBOOK_SECRET = '13114faa1d6c09c8241cf3fc5e41c2f9' #Facebook app secret
 # Extra permission want to ask Facebook users for
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+# Authenticate using Google
+# google client id
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '847321798785-33e5ferq8cvvn7a07e14mdr0jbc7ofk3.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # google client secret
