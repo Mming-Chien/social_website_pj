@@ -1,6 +1,8 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from . import views
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
 	#previous login url
@@ -34,6 +36,6 @@ urlpatterns = [
 	# Url for editing profile
 	path('edit/', views.edit, name='edit'),
 
-
-
+	#favicon
+	path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico')))
 ]
