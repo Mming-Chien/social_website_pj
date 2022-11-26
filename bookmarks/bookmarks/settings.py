@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     #third party apps
     'social_django',
     'django_extensions',
+    'easy_thumbnails',
     #django default apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -183,3 +184,6 @@ if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
     mimetypes.add_type('text/css', '.css', True)
+
+# debug for thumbnails
+THUMBNAIL_DEBUG = True
