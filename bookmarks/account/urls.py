@@ -36,6 +36,12 @@ urlpatterns = [
 	# Url for editing profile
 	path('edit/', views.edit, name='edit'),
 
+	# Url for list of users
+	path('users', views.user_list, name='user_list'),
+
+	# Url for user detail
+	path('users/<username>/', views.user_detail, name='user_detail'),
+
 	#favicon
 	path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico')))
 ]
