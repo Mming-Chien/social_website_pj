@@ -13,7 +13,7 @@ class Profile(models.Model):
 
 class Contact(models.Model):
 	''' intermediary model for many to many relationship '''
-	user_form = models.ForeignKey('auth.User', related_name='rel_form_set', on_delete=models.CASCADE)
+	user_from = models.ForeignKey('auth.User', related_name='rel_form_set', on_delete=models.CASCADE)
 	user_to = models.ForeignKey('auth.User', related_name='rel_to_set', on_delete=models.CASCADE)
 	created = models.DateTimeField(auto_now_add=True)
 	class Meta:

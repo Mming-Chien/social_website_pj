@@ -39,6 +39,9 @@ urlpatterns = [
 	# Url for list of users
 	path('users', views.user_list, name='user_list'),
 
+	# Url for follow or unfollow button
+	path('users/follow/', views.user_follow, name='user_follow'),
+
 	# Url for user detail
 	path('users/<username>/', views.user_detail, name='user_detail'),
 
