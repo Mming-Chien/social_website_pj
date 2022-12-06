@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #My apps
     'account.apps.AccountConfig',
     'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
 
     #third party apps
     'social_django',
