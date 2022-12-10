@@ -26,6 +26,6 @@ class Contact(models.Model):
 
 #Add the following field to User dymanically
 user_model = get_user_model()
-user_model.add_to_class('followiing', models.ManyToManyField('self', through=Contact, 
+user_model.add_to_class('following', models.ManyToManyField('self', through=Contact, 
 											related_name='followers', symmetrical=False))
 
