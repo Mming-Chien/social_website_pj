@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'social_django',
     'django_extensions',
     'easy_thumbnails',
+    'debug_toolbar',
     #django default apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -195,3 +197,12 @@ from django.urls import reverse_lazy
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user':lambda u: reverse_lazy('user_detail', args=[u.username])
 }
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
+# Integrate Redis to project
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
