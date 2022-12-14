@@ -12,4 +12,6 @@ urlpatterns = [
 	path('like/', views.image_like, name='like'),
 	# Infinite paginator page
 	path('', views.image_list, name='list'),
+	# The most viewed iamges
+	path('ranking/', views.image_ranking, name='ranking'),
 ]
